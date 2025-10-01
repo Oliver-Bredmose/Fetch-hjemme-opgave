@@ -30,4 +30,3 @@ document.querySelectorAll("#exampleList span").forEach(span => {
       fetchData(); // kør søgningen automatisk
     });
   });
-  
