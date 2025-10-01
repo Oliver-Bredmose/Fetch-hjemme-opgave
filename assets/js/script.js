@@ -21,5 +21,13 @@ async function fetchData(params) {
     catch (error) {
         console.error('Error fetching data:', error);
     }
-
 }
+// Finder alle eksempelpokemon
+document.querySelectorAll("#exampleList span").forEach(span => {
+    span.addEventListener("click", () => {
+      const input = document.getElementById("pokemonName");
+      input.value = span.textContent; // sæt navnet i input feltet
+      fetchData(); // kør søgningen automatisk
+    });
+  });
+  
